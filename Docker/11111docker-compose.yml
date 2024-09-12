@@ -1,0 +1,15 @@
+image: mysql:8.0
+       container_name: mysql
+       restart: always
+       environment:
+         MYSQL_DATABASE: DB_epraca
+         MYSQL_ROOT_USER: root
+         MYSQL_ROOT_PASSWORD: Password
+         MYSQL_ROOT_HOST: localhost
+    ports:
+      - "3306:3306"
+    volumes:
+      - volume-db:/var/lib/mysql
+
+volumes:
+  volume-db:
